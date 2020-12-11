@@ -26,3 +26,15 @@ $.ajax('./data/page-1.json')
 // HornInfo.prototype.render = function (keyWord) {
 
 // };
+
+
+$('.filter').on('click', function(){
+  let valuew = this.value;
+
+  const $allImagesValue = $('img');
+
+  for (let i=0; i <$allImagesValue.length; i++){
+    if($allImagesValue[i])
+  }
+
+})
