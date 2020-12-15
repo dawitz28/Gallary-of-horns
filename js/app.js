@@ -8,7 +8,9 @@ let $page2 = $('#page2');
 // let $template = $('#photo-template').html;
 // let$dropdown = $('#dropdown');
 // let $dropdown2 = $ $('#dropdown2');
-// 
+// let $page1 = $('#page1');
+// let $page2 = $('#page2');
+
 
 function HornInfo(obj) {
   this.imgUrl = obj.image_url;
@@ -19,6 +21,14 @@ function HornInfo(obj) {
   this.page = obj.page;
   hornArray.push(this);
 }
+//can we determine page number from url with a let statement?
+//let page;
+//if (this.url === './data/page-1.json') {
+//page = 1;
+//} else if (this.url === './data/page-2.json') {
+//page = 2;
+//}
+
 
 $.ajax('./data/page-1.json')
   .then(data => {
@@ -57,7 +67,7 @@ $.ajax('./data/page-1.json')
 
     $page2.click(function () {
       $container.empty();
-      photoArray = []; 
+      photoArray = [];
       $.ajax('./data/page-2.json').then(showPhotos);
     });
 
