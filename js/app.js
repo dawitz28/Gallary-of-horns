@@ -5,6 +5,10 @@ let keyword = [];
 let $page1 = $('#page1');
 let $page2 = $('#page2');
 // let $container = $('photo-container');
+// let $template = $('#photo-template').html;
+// let$dropdown = $('#dropdown');
+// let $dropdown2 = $ $('#dropdown2');
+// 
 
 function HornInfo(obj) {
   this.imgUrl = obj.image_url;
@@ -42,14 +46,20 @@ $.ajax('./data/page-1.json')
       let value = $(this).val();
       $('section').hide();
       $(`.${value}`).show();
-      if (value ==='default') $('section').show();
+      if (value === 'default') $('section').show();
     });
     // pagination implementing.
-    $page1.click(function () {$container.empty();
-    photoArray = []; $.ajax('./data/page-1.json').then(showPhotos);});
+    $page1.click(function () {
+      $container.empty();
+      photoArray = [];
+      $.ajax('./data/page-1.json').then(showPhotos);
+    });
 
-    $page2.click(function () {$container.empty();
-      photoArray = []; $.ajax('./data/page-2.json').then(showPhotos);});
-  
+    $page2.click(function () {
+      $container.empty();
+      photoArray = []; 
+      $.ajax('./data/page-2.json').then(showPhotos);
+    });
+
 
   });
