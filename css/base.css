@@ -2,6 +2,7 @@ body {
   width: 960px;
   text-align: center;
   margin: auto;
+  background-color: darkgrey;
 }
 
 #photo_template {

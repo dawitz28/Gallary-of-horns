@@ -44,6 +44,20 @@ function renderHornArray() {
   });
 }
 
+// renders with Mustache.js
+//function render(pageNumber) {
+// console.log(hornArrary);
+//$('section').remove();
+//hornArrary.forEach(obj => {
+// if (obj.page === pageNumber) {
+// console.log(obj.page)
+// let $template = $('#mustache-tmpl').html();
+//let mustTmpl = Mustache.render($template, obj);
+// $('main').append(mustTmpl);
+//}
+//});
+//}
+
 $.ajax('./data/page-1.json')
   .then(data => {
     data.forEach(object => new HornInfo(object));
