@@ -4,6 +4,10 @@ body {
   margin: auto;
 }
 
+template {
+  display: none;
+}
+
 main{
   display: flex;
 }
