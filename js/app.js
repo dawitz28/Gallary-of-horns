@@ -1,16 +1,17 @@
 'use strict';
 
-const hornArray = [];
+let hornArray = [];
 let keyword = [];
 let $page1 = $('#page1');
 let $page2 = $('#page2');
-// let $container = $('photo-container');
+let $container = $('photo-container');
 // let $template = $('#photo-template').html;
 // let$dropdown = $('#dropdown');
 // let $dropdown2 = $ $('#dropdown2');
 // let $page1 = $('#page1');
 // let $page2 = $('#page2');
-
+//let photoArray = [];
+let showPhotos = [];
 
 function HornInfo(obj) {
   this.imgUrl = obj.image_url;
@@ -58,16 +59,16 @@ $.ajax('./data/page-1.json')
       $(`.${value}`).show();
       if (value === 'default') $('section').show();
     });
-    // pagination implementing.
+    // pagination implementing
     $page1.click(function () {
       $container.empty();
-      photoArray = [];
+      hornArray = [];
       $.ajax('./data/page-1.json').then(showPhotos);
     });
 
     $page2.click(function () {
       $container.empty();
-      photoArray = [];
+      hornArray = [];
       $.ajax('./data/page-2.json').then(showPhotos);
     });
 
