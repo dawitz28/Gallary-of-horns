@@ -93,3 +93,10 @@ section {
   order: 3;
   height: 500px;
 }
+
+#photo-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
